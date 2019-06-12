@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Форма для комментария</title>
+</head>
+
+<body>
+<a href="page2.html">Прочитать статью</a>
+
+<br>
+
+<h2>Оставьте здесь свой комметрарий</h2>
+<div>
+    <form action="/some_action.php">
+        <label>Имя:
+            <input type="text" name="firstName" placeholder="Имя" required="required"/>
+        </label>
+        <label>Фамилия:
+            <input type="text" name="lastName" placeholder="Фамилия"/>
+        </label>
+        <br>
+        <label>Комментарий:<br>
+            <textarea name="comment" placeholder="Комментарий" rows="8" cols="60"></textarea>
+        </label>
+
+        <br>
+
+        <span>Оценка:</span>
+        <label><input type="radio" value="1" name="ratingRadio"> 1</label>
+        <label><input type="radio" value="2" name="ratingRadio"> 2</label>
+        <label><input type="radio" value="3" name="ratingRadio"> 3</label>
+        <label><input type="radio" value="4" name="ratingRadio"> 4</label>
+        <label><input type="radio" value="5" name="ratingRadio" checked="checked"> 5</label>
+
+        <br>
+
+        <label for="citySelect">Ваш город:</label>
+        <select id="citySelect" name="city">
+            <option value="nsk">Новосибирск</option>
+            <option value="msc">Москва</option>
+            <option value="spg">Питер</option>
+            <option value="pen">Пенза</option>
+            <option value="orl">Орел</option>
+            <option value="other">Другое</option>
+        </select>
+
+        <br>
+
+        <label>Любимые языки: <br>
+            <select name="language" multiple="multiple">
+                <option value="java">Java</option>
+                <option value="php">PHP</option>
+                <option value="c">C++</option>
+                <option value="python">Python</option>
+                <option value="javascript">Javascript</option>
+                <option value="ruby">Ruby</option>
+            </select>
+        </label>
+
+        <br>
+
+        <label><input type="checkbox" value="subscription" name="subscription" checked="checked"> Подписаться на
+            рассылку</label>
+        <label><input type="checkbox" value="lottery" name="lottery"> Учавствовать в розыгрыше</label>
+
+        <br><br>
+
+        <input type="submit" value="Отправить">
+    </form>
+</div>
+</body>
+</html>
