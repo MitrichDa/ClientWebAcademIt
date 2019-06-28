@@ -4,18 +4,21 @@
 
 .root {
     background-color: #FEEED6;
+    color: #676565;
 }
 
 .main-block {
-    font-family: Arial;
+    font-family: Arial, serif;
     margin: auto;
-    width: 750px;
+    max-width: 750px;
+    padding: 5px 0;
 }
 
 .header {
     font-size: 28px;
     font-weight: normal;
     text-transform: uppercase;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
@@ -24,7 +27,7 @@
 }
 
 .item-name {
-    color: #4393B4;
+    color: #378DB2;
     font-weight: bold;
 }
 
@@ -32,6 +35,16 @@
     margin-top: 10px;
 }
 
-p {
+.plain-text {
+
     text-indent: 20px;
+    text-align: justify ;
+    line-height: 1.4;
 }
+
+p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+
