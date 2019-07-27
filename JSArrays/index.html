@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с массивами</title>
+</head>
+
+<body>
+</body>
+
+<script src="arraysFunctions.js"></script>
+<script>
+var array = getIntegerArray(0, 10);
+
+sortDescending(array);
+console.log("Descending sort:");
+console.log(array.join(", "));
+
+console.log("First five elements:");
+console.log(getFirstNElements(array, 5).join(", "));
+
+console.log("Last five elements:");
+console.log(getLastNElements(array, 5).join(", "));
+
+console.log("Sum of even elements:");
+console.log(sumEvens(array));
+
+array = getIntegerArray(1, 100);
+console.log("Array from 1 to 100:");
+console.log(array.join(", "));
+
+var squares = getEvenSquares(array);
+
+console.log("Squares list:");
+console.log(squares.join(", "));
+</script>
+</html>
