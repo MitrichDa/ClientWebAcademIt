@@ -16,10 +16,9 @@ var getLastNElements = function (array, n) {
 var sumEvens = function (array) {
     return array.filter(function (value) {
         return value % 2 === 0;
-    })
-        .reduce(function (sum, currentElement) {
-            return sum + currentElement;
-        });
+    }).reduce(function (sum, currentElement) {
+        return sum + currentElement;
+    }, 0);
 };
 
 var getIntegerArray = function (fromNumber, toNumber) {
@@ -33,9 +32,8 @@ var getIntegerArray = function (fromNumber, toNumber) {
 var getEvenSquares = function (array) {
     return array.filter(function (value) {
         return value % 2 === 0;
-    })
-        .map(function (value) {
-            return value * value;
-        });
+    }).map(function (value) {
+        return value * value;
+    });
 };
 
