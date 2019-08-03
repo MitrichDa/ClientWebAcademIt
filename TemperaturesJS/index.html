@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./normalize.css">
+    <title>Temperatures</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Калькулятор температур</h1>
+
+<div>
+    <label><input type="number" id="celsius-temperature">°С</label>
+    <button type="button" id="convert-button">Перевести</button>
+    <div id="error-message" class="error" style=" display: none">Некоректное значение.</div>
+
+    <br>
+
+    <span>В: </span>
+    <label><input type="radio" value="1" name="convert-to" checked="checked">градусы Фаренгейта</label>
+    <label><input type="radio" value="2" name="convert-to">градусы Кельвина</label>
+
+    <div id="result">
+        <span></span><span style="display: none"> °F</span><span style="display: none"> °K</span>
+    </div>
+</div>
+
+<script src="temperatures.js"></script>
+</body>
+</html>
