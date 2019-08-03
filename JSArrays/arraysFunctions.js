@@ -1,3 +1,4 @@
+"use strict";
 var sortDescending = function (array) {
     array.sort(function (e1, e2) {
         return e2 - e1;
@@ -9,17 +10,16 @@ var getFirstNElements = function (array, n) {
 };
 
 var getLastNElements = function (array, n) {
-    return array.slice(array.length - n, array.length);
+    return array.slice(array.length - n);
 };
 
 var sumEvens = function (array) {
-    var count = 0;
-    for (var i = 0; i < array.length; i++) {
-        if (array[i] % 2 === 0) {
-            count += array[i];
-        }
-    }
-    return count;
+    return array.filter(function (value) {
+        return value % 2 === 0;
+    })
+        .reduce(function (sum, currentElement) {
+            return sum + currentElement;
+        });
 };
 
 var getIntegerArray = function (fromNumber, toNumber) {
@@ -31,12 +31,11 @@ var getIntegerArray = function (fromNumber, toNumber) {
 };
 
 var getEvenSquares = function (array) {
-    var squaresArray = [];
-    for (var i = 0; i < array.length; i++) {
-        if (array[i] % 2 === 0) {
-            squaresArray.push(array[i] * array[i]);
-        }
-    }
-    return squaresArray;
+    return array.filter(function (value) {
+        return value % 2 === 0;
+    })
+        .map(function (value) {
+            return value * value;
+        });
 };
 
