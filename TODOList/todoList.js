@@ -1,5 +1,5 @@
 "use strict";
-document.addEventListener("DOMContentLoaded", function (ev) {
+document.addEventListener("DOMContentLoaded", function () {
     var newEntryText = document.getElementById("new-entry-text");
     var addEntryButton = document.getElementById("add-entry");
     var todoList = document.getElementById("list");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function (ev) {
         "<button type='button'>Save</button>" +
         "<button type='button'>Cancel</button></div>";
 
-    addEntryButton.addEventListener("click", function (ev) {
+    addEntryButton.addEventListener("click", function () {
         var newEntry = document.createElement("li");
         newEntry.innerHTML = listElementHTML;
 
@@ -24,17 +24,17 @@ document.addEventListener("DOMContentLoaded", function (ev) {
 
         entryNormal.children[0].innerText = newEntryText.value;
 
-        entryNormal.children[1].addEventListener("click", function (evt) {
+        entryNormal.children[1].addEventListener("click", function () {
             entryChange.children[0].value = entryNormal.children[0].innerText;
             entryNormal.setAttribute("style", "display: none");
             entryChange.setAttribute("style", "display: block");
         });
 
-        entryNormal.children[2].addEventListener("click", function (evt) {
+        entryNormal.children[2].addEventListener("click", function () {
             newEntry.parentElement.removeChild(newEntry);
         });
 
-        entryChange.children[1].addEventListener("click", function (evt) {
+        entryChange.children[1].addEventListener("click", function () {
             if (entryChange.children[0].value === "") {
                 alert("Введите текст заметки");
                 return;
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function (ev) {
             entryChange.children[0].value = "";
         });
 
-        entryChange.children[2].addEventListener("click", function (evt) {
+        entryChange.children[2].addEventListener("click", function () {
             entryNormal.setAttribute("style", "display: block");
             entryChange.setAttribute("style", "display: none");
             entryChange.children[0].value = "";
