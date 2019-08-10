@@ -17,14 +17,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         errorMessage.style.display = "none";
 
+        var resultValue = result.children[0];
+        var fahrenheitSymbol = result.children[1];
+        var kelvinSymbol = result.children[2];
         if (convertToValue === "1") {
-            result.children[0].innerText = convertToFahrenheit(Number(celsiusTemperatureValue));
-            result.children[1].setAttribute("style", "display: inline");
-            result.children[2].style.display = "none";
+            resultValue.innerText = convertToFahrenheit(Number(celsiusTemperatureValue));
+            fahrenheitSymbol.style.display = "inline";
+            kelvinSymbol.style.display = "none";
         } else {
-            result.children[0].innerText = convertToKelvin(Number(celsiusTemperatureValue));
-            result.children[2].setAttribute("style", "display: inline");
-            result.children[1].style.display = "none";
+            resultValue.innerText = convertToKelvin(Number(celsiusTemperatureValue));
+            kelvinSymbol.style.display = "inline";
+            fahrenheitSymbol.style.display = "none";
         }
     });
 
