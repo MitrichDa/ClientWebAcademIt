@@ -23,13 +23,14 @@ var countriesArray = [new Country("Russia", [new City("Moscow", 15000000), new C
     new Country("USA", [new City("New York", 16000000), new City("Los Angeles", 10000000), new City("Saint Francisco", 12500000)]),
     new Country("Japan", [new City("Tokyo", 10000000), new City("Osaka", 3000000), new City("Kyoto", 1500000), new City("Fukuoka", 1300000)])];
 
-var getCountriesWithMaxCityCount = function (countriesArray) {
-    var maxCityCount = countriesArray.reduce(function (maxCityCount, element) {
-        return maxCityCount < element.cities.length ? element.cities.length : maxCityCount;
-    }, 0);
+var getCountriesWithMaxCitiesCount = function (countriesArray) {
+    var citiesCountArray = countriesArray.map(function (country) {
+        return country.cities.length;
+    });
+    var maxCitiesCount = Math.max(...citiesCountArray);
 
     return countriesArray.filter(function (value) {
-        return value.cities.length === maxCityCount;
+        return value.cities.length === maxCitiesCount;
     });
 };
 
