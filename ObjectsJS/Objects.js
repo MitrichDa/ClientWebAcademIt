@@ -27,7 +27,7 @@ var getCountriesWithMaxCitiesCount = function (countriesArray) {
     var citiesCountArray = countriesArray.map(function (country) {
         return country.cities.length;
     });
-    var maxCitiesCount = Math.max(...citiesCountArray);
+    var maxCitiesCount = Math.max.apply(Math, citiesCountArray);
 
     return countriesArray.filter(function (value) {
         return value.cities.length === maxCitiesCount;
