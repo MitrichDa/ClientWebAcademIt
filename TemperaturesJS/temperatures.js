@@ -11,20 +11,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var celsiusTemperatureValue = celsiusTemperature.value;
         if (celsiusTemperatureValue === "" || Number(celsiusTemperatureValue) < -273.15) {
-            errorMessage.setAttribute("style", "display: block");
+            errorMessage.style.display = "block";
             return;
         }
 
-        errorMessage.setAttribute("style", "display: none");
+        errorMessage.style.display = "none";
 
         if (convertToValue === "1") {
             result.children[0].innerText = convertToFahrenheit(Number(celsiusTemperatureValue));
             result.children[1].setAttribute("style", "display: inline");
-            result.children[2].setAttribute("style", "display: none");
+            result.children[2].style.display = "none";
         } else {
             result.children[0].innerText = convertToKelvin(Number(celsiusTemperatureValue));
             result.children[2].setAttribute("style", "display: inline");
-            result.children[1].setAttribute("style", "display: none");
+            result.children[1].style.display = "none";
         }
     });
 
